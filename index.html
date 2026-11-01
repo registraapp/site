@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registra — l'e-reporting de votre boutique Shopify, fait pour vous</title>
+<meta name="description" content="À partir du 1er septembre 2027, votre boutique Shopify devra transmettre ses ventes au fisc par e-reporting. Registra le fera automatiquement. Liste d'attente ouverte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF7; --ink:#14213D; --ink-soft:#4A5470; --rule:#D5D9E6;
+    --panel:#EDF0F8; --panel-deep:#DDE3F3; --stamp:#B5321F; --ok:#2E7D5B;
+    --focus:#2F5BEA;
+    --serif:"IBM Plex Serif",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .prose{max-width:680px}
+
+  header{border-bottom:1px solid var(--rule)}
+  .nav{display:flex;align-items:baseline;justify-content:space-between;padding:22px 0}
+  .brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.01em;text-decoration:none}
+  .brand small{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:10px}
+  .nav a.cta{font-size:15px;font-weight:500;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:1px}
+
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center;padding:72px 0 64px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.6vw,52px);line-height:1.12;letter-spacing:-.015em;margin:0 0 22px;max-width:16ch}
+  .lede{font-size:19px;color:var(--ink-soft);margin:0 0 30px;max-width:56ch}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:14px 22px;border-radius:4px;border:0;font-size:16px;font-family:var(--sans);cursor:pointer}
+  .btn:hover{background:#0E1830}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .hero-aside{justify-self:center}
+
+  .stamp{display:inline-block;transform:rotate(-7deg);color:var(--stamp);border:3px double currentColor;border-radius:6px;padding:14px 22px 16px;text-align:center;mix-blend-mode:multiply;opacity:.92}
+  .stamp .k{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1;letter-spacing:-.01em}
+  .stamp .k span{display:block;font-size:15px;font-weight:500;margin-top:8px;letter-spacing:.02em}
+
+  section{padding:56px 0;border-top:1px solid var(--rule)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.2;letter-spacing:-.01em;margin:0 0 10px}
+  .sub{color:var(--ink-soft);margin:0 0 28px;max-width:60ch}
+
+  dl.facts{margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
+  dl.facts div{padding:22px 24px 26px 0;border-bottom:1px solid var(--rule)}
+  dl.facts div+div{border-left:1px solid var(--rule);padding-left:24px}
+  dl.facts dt{font-family:var(--serif);font-weight:600;font-size:21px;margin-bottom:8px}
+  dl.facts dd{margin:0;color:var(--ink-soft);font-size:16px}
+
+  .sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;background:var(--panel);border-radius:8px;padding:32px}
+  .sim fieldset{border:0;margin:0 0 18px;padding:0}
+  .sim legend,label.l{display:block;font-weight:500;margin-bottom:8px}
+  select,input[type=email],input[type=text]{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid #B9C1D9;border-radius:4px;background:#fff;color:var(--ink)}
+  .radios label{display:flex;gap:10px;align-items:center;padding:6px 0;font-weight:400}
+  .result{background:#fff;border-radius:6px;padding:26px 28px;border-left:5px solid var(--ok);align-self:start}
+  .result h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:0 0 10px;line-height:1.25}
+  .result p{margin:0 0 12px}
+  .result p:last-child{margin:0}
+  .result .cad{font-family:var(--serif);font-size:26px;font-weight:600;margin:10px 0 4px}
+  .result.muted{border-left-color:#B9C1D9;color:var(--ink-soft)}
+  .result small{display:block;color:var(--ink-soft);font-size:14px;margin-top:14px}
+
+  ul.does{list-style:none;padding:0;margin:0;max-width:720px}
+  ul.does li{padding:16px 0 16px 34px;border-bottom:1px solid var(--rule);position:relative}
+  ul.does li::before{content:"";position:absolute;left:0;top:25px;width:18px;height:2px;background:var(--ink)}
+  ul.does li strong{font-weight:600}
+  .not{margin-top:22px;color:var(--ink-soft);max-width:66ch}
+
+  .join{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+  form.wl{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:28px}
+  form.wl .row{margin-bottom:16px}
+  form.wl label.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-soft)}
+  form.wl .btn{width:100%;margin-top:6px}
+  .fine{font-size:14px;color:var(--ink-soft);margin:12px 0 0}
+  .thanks{display:none;background:#fff;border:1px solid var(--rule);border-radius:8px;padding:28px}
+
+  footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-soft);font-size:14px}
+  footer p{margin:0 0 8px;max-width:72ch}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;gap:28px;padding:48px 0 40px}
+    .hero-aside{justify-self:start}
+    dl.facts{grid-template-columns:1fr}
+    dl.facts div+div{border-left:0;padding-left:0}
+    .sim,.join{grid-template-columns:1fr}
+    .sim{padding:22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Registra<small>pour Shopify</small></a>
+    <a class="cta" href="#liste">Liste d'attente</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div>
+      <h1>Votre boutique Shopify devra déclarer ses ventes au fisc. Pas vous.</h1>
+      <p class="lede">À partir du 1er septembre 2027, chaque TPE française transmet ses ventes aux particuliers par e-reporting et ses factures professionnelles au format électronique, via une plateforme agréée. Shopify ne le fait pas. Registra le fera pour vous, à chaque échéance, sans ressaisie.</p>
+      <a class="btn" href="#liste">Rejoindre la liste d'attente</a>
+      <a class="btn ghost" href="#simulateur" style="margin-left:10px">Suis-je concerné ?</a>
+    </div>
+    <div class="hero-aside" aria-hidden="true">
+      <div class="stamp"><div class="k">1er sept.<br>2027<span>émission et e-reporting obligatoires</span></div></div>
+    </div>
+  </div>
+
+  <section id="changement">
+    <h2>Ce qui change pour une boutique en ligne</h2>
+    <p class="sub">La réforme de la facturation électronique s'applique à toutes les entreprises françaises assujetties, y compris les micro-entrepreneurs en franchise de TVA.</p>
+    <dl class="facts">
+      <div>
+        <dt>Vos ventes aux particuliers</dt>
+        <dd>Elles ne demandent pas de facture électronique, mais leurs montants (hors taxes, TVA par taux, nombre de transactions) doivent être transmis au fisc par e-reporting, à une cadence qui dépend de votre régime de TVA.</dd>
+      </div>
+      <div>
+        <dt>Vos factures aux professionnels</dt>
+        <dd>Elles doivent être émises dans un format électronique structuré (Factur-X) et déposées sur une plateforme agréée, qui les achemine à votre client et au fisc. Un PDF envoyé par e-mail ne suffira plus.</dd>
+      </div>
+      <div>
+        <dt>Ce que Shopify fait</dt>
+        <dd>Shopify génère des factures PDF simples, n'est relié à aucune plateforme agréée et ne transmet aucune donnée de vente. Le numéro de commande n'est pas un numéro de facture valable.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="simulateur">
+    <h2>Suis-je concerné, et à quelle cadence ?</h2>
+    <p class="sub">Trois questions. Le résultat se met à jour tout seul. Il est indicatif : votre expert-comptable reste la référence.</p>
+    <div class="sim">
+      <form id="simForm">
+        <fieldset>
+          <legend>Où est établie votre entreprise ?</legend>
+          <div class="radios">
+            <label><input type="radio" name="pays" value="fr" checked> En France</label>
+            <label><input type="radio" name="pays" value="autre"> Dans un autre pays</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Quelle est votre taille ?</legend>
+          <div class="radios">
+            <label><input type="radio" name="taille" value="pme" checked> Micro-entreprise, TPE ou PME (moins de 250 salariés)</label>
+            <label><input type="radio" name="taille" value="eti"> ETI ou grande entreprise</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label class="l" for="regime">Votre régime de TVA</label>
+          <select id="regime" name="regime">
+            <option value="franchise">Franchise en base (pas de TVA facturée)</option>
+            <option value="simplifie" selected>Réel simplifié</option>
+            <option value="normal-trim">Réel normal, déclaration trimestrielle</option>
+            <option value="normal-mens">Réel normal, déclaration mensuelle</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Vendez-vous aussi à des professionnels ?</legend>
+          <div class="radios">
+            <label><input type="radio" name="b2b" value="non" checked> Non, uniquement à des particuliers</label>
+            <label><input type="radio" name="b2b" value="oui"> Oui, j'ai des clients professionnels</label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="result" id="simResult" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="app">
+    <h2>Ce que Registra fera à votre place</h2>
+    <p class="sub">Une app installée dans votre administration Shopify, en français, à prix fixe. Vous la configurez une fois ; ensuite elle travaille à chaque échéance.</p>
+    <ul class="does">
+      <li><strong>Agrège vos ventes</strong> par période et par taux de TVA, en tenant compte des remboursements et des avoirs, puis dépose le relevé sur une plateforme agréée à la bonne cadence.</li>
+      <li><strong>Émet vos factures professionnelles</strong> au format Factur-X, avec une numérotation continue et les mentions légales françaises, et les dépose pour transmission à vos clients.</li>
+      <li><strong>Suit chaque dépôt</strong> : accepté, rejeté, à corriger. Vous êtes prévenu seulement quand quelque chose demande votre attention.</li>
+      <li><strong>Conserve tout</strong> pendant la durée légale et transmet à votre expert-comptable un export qu'il peut lire, quel que soit son logiciel.</li>
+    </ul>
+    <p class="not">Ce que Registra ne fera pas : déclarer ou payer votre TVA à votre place, ni remplacer votre expert-comptable. Il lui apporte des données propres, à l'heure.</p>
+  </section>
+
+  <section id="liste">
+    <div class="join">
+      <div>
+        <h2>Rejoindre la liste d'attente</h2>
+        <p class="sub">Registra est en construction. Les premières boutiques inscrites l'utiliseront gratuitement pendant la phase de test, au printemps 2027, et fixeront avec nous le prix définitif.</p>
+        <p class="sub">Trois questions en plus de votre e-mail nous aident à construire d'abord ce dont vous avez besoin. Aucune revente de données, aucune newsletter : nous écrivons quand il y a du nouveau.</p>
+      </div>
+      <form class="wl" id="wlForm" method="POST" action="https://formspree.io/f/mzeejnkr">
+        <div class="row">
+          <label class="l" for="email">Votre e-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="vous@votreboutique.fr">
+        </div>
+        <div class="row">
+          <label class="l" for="volume">Commandes par mois</label>
+          <select id="volume" name="commandes_par_mois">
+            <option>Moins de 50</option>
+            <option selected>50 à 300</option>
+            <option>300 à 1 000</option>
+            <option>Plus de 1 000</option>
+          </select>
+        </div>
+        <div class="row">
+          <label class="l" for="compta">Comment tenez-vous votre comptabilité ?</label>
+          <select id="compta" name="comptabilite">
+            <option>Pennylane</option>
+            <option>Qonto</option>
+            <option>Indy</option>
+            <option>Tiime</option>
+            <option>Sage, Cegid ou EBP</option>
+            <option>Mon expert-comptable s'en occupe</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="row">
+          <label class="l" for="b2bq">Clients professionnels</label>
+          <select id="b2bq" name="clients_pro">
+            <option>Non, uniquement des particuliers</option>
+            <option>Oui, quelques-uns</option>
+            <option>Oui, c'est une part importante</option>
+          </select>
+        </div>
+        <div class="row">
+          <label class="chk"><input type="checkbox" name="consentement" required> J'accepte d'être contacté au sujet de Registra. Je peux me retirer de la liste d'un simple e-mail.</label>
+        </div>
+        <input type="hidden" name="source" value="landing-v1">
+        <button class="btn" type="submit">M'inscrire sur la liste d'attente</button>
+        <p class="fine">Vos réponses servent uniquement à construire le produit. Elles ne sont ni revendues ni partagées.</p>
+      </form>
+      <div class="thanks" id="wlThanks">
+        <h3 style="font-family:var(--serif);margin:0 0 8px">Vous êtes inscrit.</h3>
+        <p style="margin:0">Merci. Nous vous écrirons quand la phase de test ouvrira. En attendant, une question ou une situation particulière ? Répondez simplement à l'e-mail de confirmation.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Registra est un projet indépendant en cours de construction, novembre 2026. Il n'est pas encore disponible et n'est affilié ni à Shopify ni à l'administration fiscale.</p>
+    <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif ; les textes officiels et votre expert-comptable font foi.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('simForm'), out=document.getElementById('simResult');
+  var cadence={
+    'franchise':{txt:'tous les deux mois',n:'6 dépôts par an'},
+    'simplifie':{txt:'chaque mois',n:'12 dépôts par an'},
+    'normal-trim':{txt:'chaque mois',n:'12 dépôts par an'},
+    'normal-mens':{txt:'tous les dix jours',n:'36 dépôts par an'}
+  };
+  function val(name){var el=form.querySelector('[name='+name+']:checked')||form.querySelector('[name='+name+']');return el?el.value:'';}
+  function render(){
+    var pays=val('pays'), taille=val('taille'), regime=form.regime.value, b2b=val('b2b');
+    if(pays!=='fr'){
+      out.className='result muted';
+      out.innerHTML='<h3>Pas concerné pour l’instant.</h3><p>La réforme française vise les entreprises établies en France. Si vous avez un établissement en France, répondez pour celui-ci.</p>';
+      return;
+    }
+    var date = taille==='eti' ? 'déjà, depuis le 1er septembre 2026' : 'à partir du 1er septembre 2027';
+    var c=cadence[regime];
+    var html='<h3>Oui, vous êtes concerné '+date+'.</h3>';
+    html+='<p>Vos ventes aux particuliers devront être transmises par e-reporting :</p>';
+    html+='<div class="cad">'+c.txt+'</div><p>'+c.n+', avec les montants hors taxes, la TVA par taux et le nombre de transactions. Les remboursements corrigent les dépôts déjà transmis.</p>';
+    if(b2b==='oui'){
+      html+='<p>Vos factures aux clients professionnels devront en plus être émises au format Factur-X et déposées sur une plateforme agréée, avec une numérotation continue.</p>';
+    }
+    if(regime==='franchise'){
+      html+='<p>La franchise en base ne vous dispense pas de l’e-reporting : elle allège seulement la cadence et le contenu transmis.</p>';
+    }
+    html+='<small>Réponse indicative, fondée sur le calendrier publié ; votre expert-comptable confirme votre situation.</small>';
+    out.className='result';
+    out.innerHTML=html;
+  }
+  form.addEventListener('change',render); render();
+
+  var wl=document.getElementById('wlForm'), th=document.getElementById('wlThanks');
+  wl.addEventListener('submit',function(e){
+    if(wl.action.indexOf('REMPLACER_PAR_VOTRE_ID')>-1){ e.preventDefault(); wl.style.display='none'; th.style.display='block'; return; }
+    e.preventDefault();
+    var data=new FormData(wl);
+    fetch(wl.action,{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(function(r){
+      if(r.ok){wl.style.display='none';th.style.display='block';}
+      else{alert('L’inscription n’a pas abouti. Réessayez dans un instant.');}
+    }).catch(function(){alert('L’inscription n’a pas abouti. Vérifiez votre connexion et réessayez.');});
+  });
+})();
+</script>
+</body>
+</html>
