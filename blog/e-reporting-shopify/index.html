@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-reporting Shopify : ce que doit faire votre boutique</title>
+<meta name="description" content="E-reporting des ventes aux particuliers, factures B2B, calendrier 2026-2027 : ce que la réforme impose à une boutique Shopify et ce que Shopify ne fait pas.">
+<link rel="canonical" href="https://registraapp.fr/blog/e-reporting-shopify/">
+<meta property="og:title" content="E-reporting et facturation électronique sur Shopify : ce qui change pour votre boutique">
+<meta property="og:description" content="E-reporting des ventes aux particuliers, factures B2B, calendrier 2026-2027 : ce que la réforme impose à une boutique Shopify et ce que Shopify ne fait pas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://registraapp.fr/blog/e-reporting-shopify/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Registra">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF7; --ink:#14213D; --ink-soft:#4A5470; --rule:#D5D9E6;
+    --panel:#EDF0F8; --panel-deep:#DDE3F3; --stamp:#B5321F; --ok:#2E7D5B;
+    --focus:#2F5BEA;
+    --serif:"IBM Plex Serif",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--rule)}
+  .nav{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;padding:22px 20px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.01em;text-decoration:none}
+  .brand small{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:10px}
+  .nav .links{display:flex;gap:22px}
+  .nav .links a{font-size:15px;font-weight:500;text-decoration:none}
+  .nav .links a.cta{border-bottom:2px solid var(--ink);padding-bottom:1px}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.2vw,44px);line-height:1.14;letter-spacing:-.015em;margin:0 0 20px}
+  h2{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.22;letter-spacing:-.01em;margin:48px 0 12px}
+  h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.3;margin:30px 0 8px}
+  .lede{font-size:19px;color:var(--ink-soft);margin:0 0 18px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:14px 22px;border-radius:4px;border:0;font-size:16px;font-family:var(--sans);cursor:pointer}
+  .btn:hover{background:#0E1830}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+
+  /* article */
+  article{max-width:720px;padding:28px 0 64px}
+  article p,article li{overflow-wrap:break-word}
+  .crumbs{font-size:14px;color:var(--ink-soft);margin:0 0 26px}
+  .crumbs ol{list-style:none;padding:0;margin:0}
+  .crumbs li{display:inline}
+  .crumbs li+li::before{content:"\203A";margin:0 6px}
+  .crumbs a{color:var(--ink-soft)}
+  .updated{font-size:14px;color:var(--ink-soft);margin:0 0 30px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+  article ul,article ol{padding-left:22px}
+  article li{margin-bottom:8px}
+  .tbl{overflow-x:auto;margin:18px 0 8px;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--rule);font-size:15.5px}
+  th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--panel)}
+  tr:last-child td{border-bottom:0}
+  .caption{font-size:14px;color:var(--ink-soft);margin:6px 0 0}
+  ul.check{list-style:none;padding:0;margin:18px 0}
+  ul.check li{position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--rule);margin:0}
+  ul.check li::before{content:"";position:absolute;left:2px;top:16px;width:16px;height:16px;border:2px solid var(--ink);border-radius:3px}
+  .note{background:var(--panel);border-radius:6px;padding:18px 22px;margin:22px 0}
+  .note p{margin:0}
+  .cta-box{background:#fff;border:1px solid var(--rule);border-left:5px solid var(--ok);border-radius:6px;padding:24px 26px;margin:40px 0}
+  .cta-box h2{margin:0 0 8px;font-size:23px}
+  .cta-box p{margin:0 0 16px;color:var(--ink-soft)}
+  .cta-box .btn{margin:0 10px 10px 0}
+  .faq h3{margin-top:26px}
+  .faq p{margin:0 0 8px}
+  .sources{font-size:15px}
+  .sources li{margin-bottom:6px}
+  .related{list-style:none;padding:0}
+  .related li{padding:12px 0;border-bottom:1px solid var(--rule);margin:0}
+
+  /* hub */
+  .hub{max-width:760px;padding:28px 0 64px}
+  .hub ul{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid var(--rule)}
+  .hub li{padding:22px 0;border-bottom:1px solid var(--rule)}
+  .hub li a{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.3}
+  .hub li p{margin:6px 0 0;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-soft);font-size:14px}
+  footer p{margin:0 0 8px;max-width:72ch}
+  @media (max-width:600px){
+    body{font-size:16.5px}
+    h2{font-size:24px;margin-top:40px}
+    th,td{padding:9px 10px}
+    table{font-size:14.5px}
+    .nav .links{gap:16px}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "E-reporting et facturation électronique sur Shopify : ce qui change pour votre boutique",
+  "description": "E-reporting des ventes aux particuliers, factures B2B, calendrier 2026-2027 : ce que la réforme impose à une boutique Shopify et ce que Shopify ne fait pas.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "fr-FR",
+  "mainEntityOfPage": "https://registraapp.fr/blog/e-reporting-shopify/",
+  "author": {
+    "@type": "Person",
+    "name": "Amine",
+    "jobTitle": "Ingénieur DevOps"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Registra",
+    "url": "https://registraapp.fr"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://registraapp.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://registraapp.fr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "E-reporting et facturation électronique sur Shopify : ce qui change pour votre boutique",
+      "item": "https://registraapp.fr/blog/e-reporting-shopify/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Shopify fait-il l'e-reporting automatiquement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Shopify n'est pas une plateforme agréée et ne transmet aucune donnée de vente à l'administration fiscale. Il fournit des rapports de ventes et de taxes qui servent de matière première, mais l'agrégation par jour et par taux de TVA puis le dépôt sur une plateforme agréée doivent être faits par une application tierce, un logiciel comptable connecté ou votre expert-comptable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dois-je envoyer une facture électronique à mes clients particuliers ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. La facture électronique obligatoire concerne les ventes entre entreprises établies en France. Pour vos ventes aux particuliers, vous transmettez à la place des données agrégées par e-reporting : pour chaque jour et chaque taux de TVA, le montant hors taxes et la TVA correspondante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand une boutique Shopify doit-elle faire son premier e-reporting ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour une micro-entreprise, une TPE ou une PME, l'e-reporting devient obligatoire le 1er septembre 2027. Les grandes entreprises et les ETI y sont soumises depuis le 1er septembre 2026. Depuis cette même date, toutes les entreprises doivent pouvoir recevoir des factures électroniques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "À quelle fréquence transmettre mes ventes en e-reporting ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elle dépend de votre régime de TVA : tous les deux mois en franchise en base, chaque mois au réel simplifié et au réel normal trimestriel, trois fois par mois (par décade) au réel normal mensuel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Je suis en franchise de TVA, suis-je concerné par l'e-reporting ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. La franchise en base ne dispense ni de la réception des factures électroniques, ni de l'e-reporting de vos ventes aux particuliers. Elle fixe seulement une cadence bimestrielle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que risque une boutique qui ne fait pas son e-reporting ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La loi de finances pour 2026 prévoit, selon les résumés publiés, une amende de 500 € par transmission manquante, plafonnée à 15 000 € par an. La DGFiP a annoncé ne pas sanctionner, pendant la phase de lancement, les entreprises de bonne foi qui rencontrent des difficultés, sans que cela reporte l'obligation."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">Registra<small>Guides</small></a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="/blog/">Guides</a>
+      <a class="cta" href="/#liste">Liste d'attente</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<nav class="crumbs" aria-label="Fil d'Ariane"><ol>
+  <li><a href="/">Accueil</a></li>
+  <li><a href="/blog/">Guides</a></li>
+  <li aria-current="page">E-reporting et facturation électronique sur Shopify&nbsp;: ce qui change pour votre boutique</li>
+</ol></nav>
+<h1>E-reporting et facturation électronique sur Shopify&nbsp;: ce qui change pour votre boutique</h1>
+
+<p class="lede">Une boutique Shopify française qui vend à des particuliers n'émettra pas de facture électronique pour ces ventes, mais devra transmettre chaque jour de vente, agrégé par taux de TVA, à l'administration fiscale via une plateforme agréée&nbsp;: c'est l'e-reporting. Pour une TPE ou une micro-entreprise, il démarre le 1er septembre 2027. Shopify ne le fait pas nativement.</p>
+<p class="updated">Mis à jour le 3 novembre 2026 · par Amine, ingénieur DevOps</p>
+
+<h2>L'e-reporting, en clair</h2>
+<p>La réforme de la facturation électronique comporte deux volets. Le premier concerne les ventes entre entreprises établies en France&nbsp;: la facture doit être émise dans un format structuré et passer par une plateforme agréée (PA), qui la remet au client et en extrait les données pour le fisc. Le second, l'e-reporting, concerne tout le reste&nbsp;: les ventes aux particuliers (B2C), les ventes à l'international et, dans certains cas, les encaissements.</p>
+<p>Pour un e-commerçant, c'est souvent l'essentiel de l'activité. Vous ne changez rien à ce que voit votre client&nbsp;: il reçoit toujours sa confirmation de commande et, s'il la demande, sa facture. Ce qui change se passe en coulisse, entre votre boutique, une plateforme agréée et l'administration.</p>
+
+<h2>Le calendrier&nbsp;: 2026 pour recevoir, 2027 pour transmettre</h2>
+<p>Les dates ci-dessous sont celles publiées par la DGFiP, vérifiées en novembre 2026.</p>
+<div class="tbl"><table>
+<thead><tr><th>Date</th><th>Qui</th><th>Obligation</th></tr></thead>
+<tbody>
+<tr><td>1er septembre 2026</td><td>Toutes les entreprises, quelle que soit leur taille</td><td>Pouvoir recevoir des factures électroniques via une plateforme agréée</td></tr>
+<tr><td>1er septembre 2026</td><td>Grandes entreprises et ETI</td><td>Émettre des factures électroniques et transmettre les données de transaction et de paiement (e-reporting)</td></tr>
+<tr><td>1er septembre 2027</td><td>PME, TPE et micro-entreprises</td><td>Émettre des factures électroniques et faire l'e-reporting</td></tr>
+</tbody></table></div>
+<p class="caption">Source&nbsp;: impots.gouv.fr, «&nbsp;À partir de quand suis-je concerné&nbsp;», et guide pratique de la DGFiP de juillet 2026.</p>
+<p>Concrètement, si votre boutique est une TPE ou une micro-entreprise, vous êtes déjà concerné par la réception&nbsp;: un fournisseur soumis à l'émission (une ETI, par exemple) vous adresse ses factures par sa plateforme, et vous devez en avoir une pour les recevoir. L'e-reporting de vos ventes, lui, commence avec les ventes du mois de septembre 2027.</p>
+
+<h2>Quelles données transmettre pour vos ventes aux particuliers</h2>
+<p>Pour les ventes B2C, l'administration ne demande pas le détail de chaque commande. Les données sont agrégées par jour. Selon la page de la DGFiP consacrée aux données de transaction, chaque transmission comprend&nbsp;:</p>
+<ul>
+<li><strong>un en-tête</strong>&nbsp;: votre SIREN, la période couverte et, le cas échéant, la mention de l'option pour le paiement de la TVA d'après les débits&nbsp;;</li>
+<li><strong>pour chaque jour</strong>&nbsp;: la date, la base hors taxes totale des opérations de la journée et le montant de TVA correspondant&nbsp;;</li>
+<li><strong>une ventilation par taux</strong>&nbsp;: si vous vendez à plusieurs taux (20&nbsp;%, 5,5&nbsp;%…), ces montants sont transmis pour chaque taux&nbsp;;</li>
+<li><strong>une ventilation par catégorie</strong>&nbsp;: livraisons de biens, prestations de services, opérations relevant de la TVA sur la marge, et certaines ventes intracommunautaires.</li>
+</ul>
+<p>S'y ajoutent, dans certains cas, des <strong>données de paiement</strong>. Elles ne concernent que les opérations dont la TVA est exigible à l'encaissement, typiquement des prestations de services sans option pour les débits. Une boutique qui vend uniquement des biens n'est en général pas concernée par ce second flux, mais faites-le confirmer par votre expert-comptable si vous vendez aussi des services (abonnements, ateliers, personnalisation facturée à part).</p>
+
+<h3>Ce que cela implique pour une boutique Shopify</h3>
+<p>Les données existent déjà dans Shopify, mais pas sous la forme attendue. Il faut les reconstituer jour par jour et taux par taux, en tenant compte de plusieurs cas propres au e-commerce&nbsp;:</p>
+<ul>
+<li><strong>les remboursements et annulations</strong>, qui modifient le chiffre d'une journée déjà transmise ou doivent être reportés sur une période suivante&nbsp;; la manière exacte de les traiter dépend des spécifications de l'administration et de votre plateforme agréée&nbsp;;</li>
+<li><strong>les frais de port</strong>, qui suivent en principe le taux du produit expédié, ce qui complique les paniers mixtes&nbsp;;</li>
+<li><strong>les codes promo et cartes cadeaux</strong>, qui changent la base hors taxes ou le moment où la vente est constatée&nbsp;;</li>
+<li><strong>les ventes à des particuliers d'autres pays de l'Union</strong>, souvent déclarées via le guichet unique OSS, qui ont un traitement particulier dans l'e-reporting. C'est un point à valider avec votre expert-comptable, car les textes distinguent plusieurs situations.</li>
+</ul>
+
+<h2>La cadence dépend de votre régime de TVA</h2>
+<p>La fréquence de transmission des données de transaction ne dépend pas de la taille de votre boutique, mais de votre régime de TVA.</p>
+<div class="tbl"><table>
+<thead><tr><th>Régime de TVA</th><th>Fréquence</th><th>Délai de transmission</th></tr></thead>
+<tbody>
+<tr><td>Franchise en base</td><td>Tous les deux mois (janvier-février, mars-avril…)</td><td>Entre le 25 et la fin du mois qui suit la période</td></tr>
+<tr><td>Réel simplifié</td><td>Chaque mois</td><td>Entre le 25 et la fin du mois suivant</td></tr>
+<tr><td>Réel normal, déclaration trimestrielle</td><td>Chaque mois</td><td>Avant le 10 du mois suivant</td></tr>
+<tr><td>Réel normal, déclaration mensuelle</td><td>Trois fois par mois (du 1er au 10, du 11 au 20, du 21 à la fin du mois)</td><td>Dans les dix jours suivant la fin de chaque décade</td></tr>
+</tbody></table></div>
+<p class="caption">Source&nbsp;: impots.gouv.fr, tableau des fréquences et délais de transmission, mise à jour août 2026.</p>
+<p>Au réel normal mensuel, cela représente 36 dépôts par an. Même en franchise, c'est six dépôts&nbsp;: une charge modeste si elle est automatisée, pénible si elle est faite à la main à partir d'exports.</p>
+
+<h2>Et vos clients professionnels&nbsp;?</h2>
+<p>Si votre boutique vend aussi à des entreprises établies en France, ces ventes sortent de l'e-reporting&nbsp;: à partir du 1er septembre 2027, elles doivent faire l'objet d'une facture électronique. Un PDF envoyé par e-mail ne suffira plus. La facture doit être produite dans l'un des formats du socle (Factur-X, UBL ou CII), déposée sur votre plateforme agréée et adressée à la plateforme de votre client grâce à l'annuaire tenu par l'administration.</p>
+<p>Quatre mentions s'ajoutent aux mentions habituelles&nbsp;: le SIREN du client, la nature de l'opération (livraison de biens, prestation de services ou les deux), l'option pour la TVA d'après les débits le cas échéant, et l'adresse de livraison si elle diffère de l'adresse de facturation. La numérotation doit rester continue et chronologique&nbsp;: un numéro de commande Shopify n'en tient pas lieu automatiquement.</p>
+
+<h2>Ce que Shopify fait, et ce qu'il ne fait pas</h2>
+<p>Shopify est un outil de vente, pas une plateforme agréée. En novembre 2026, à notre connaissance&nbsp;:</p>
+<div class="tbl"><table>
+<thead><tr><th>Besoin</th><th>Shopify, nativement</th><th>À prévoir</th></tr></thead>
+<tbody>
+<tr><td>Rapports de ventes et de taxes</td><td>Oui, exportables</td><td>Les retraiter par jour, par taux et par catégorie</td></tr>
+<tr><td>Facture PDF au client</td><td>Possible via des modèles ou des apps</td><td>Numérotation continue et mentions légales à vérifier</td></tr>
+<tr><td>Facture Factur-X pour un client professionnel</td><td>Non</td><td>App tierce ou logiciel de facturation</td></tr>
+<tr><td>Dépôt sur une plateforme agréée</td><td>Non</td><td>Connecteur entre la boutique et une plateforme agréée</td></tr>
+<tr><td>E-reporting des ventes B2C</td><td>Non</td><td>Agrégation et dépôt à la cadence de votre régime</td></tr>
+</tbody></table></div>
+<p>Plusieurs applications de l'App Store Shopify produisent déjà des factures au format Factur-X. Produire le bon format ne suffit pas&nbsp;: vérifiez qu'elles sont reliées à une plateforme agréée figurant sur la liste publiée par l'administration, et qu'elles traitent aussi l'e-reporting des ventes aux particuliers, qui est le volet le plus lourd pour une boutique.</p>
+
+<h2>Sanctions et tolérance</h2>
+<p>La loi de finances pour 2026 a relevé les amendes. D'après les résumés publiés, notamment par la CAPEB, l'absence de transmission des données d'e-reporting coûte 500&nbsp;€ par manquement, plafonnés à 15&nbsp;000&nbsp;€ par an, et une facture non émise au format électronique 50&nbsp;€ par facture, avec le même plafond. La DGFiP indique de son côté qu'elle n'appliquera pas de sanctions, pendant la phase de lancement, aux entreprises qui rencontrent des difficultés, en précisant que ce n'est ni un report ni une suspension de l'obligation. Le texte de loi lui-même reste la référence.</p>
+
+<h2>Checklist pour une boutique Shopify</h2>
+<ul class="check">
+<li>Vérifier votre catégorie d'entreprise (micro, TPE, PME ou ETI) et votre régime de TVA&nbsp;: ils fixent la date et la cadence.</li>
+<li>Choisir une plateforme agréée dans la liste officielle et vous y inscrire, pour recevoir dès maintenant les factures de vos fournisseurs.</li>
+<li>Vérifier que la plateforme est bien désignée dans l'annuaire comme adresse de réception de votre SIREN.</li>
+<li>Faire l'inventaire de vos taux de TVA, de vos catégories (biens, services) et de vos ventes hors de France.</li>
+<li>Identifier vos clients professionnels et collecter leur SIREN avant septembre 2027.</li>
+<li>Choisir comment vos ventes Shopify rejoindront la plateforme&nbsp;: app connectée, logiciel comptable ou traitement par votre cabinet.</li>
+<li>Tester une période complète, remboursements compris, avant la première échéance obligatoire.</li>
+<li>Convenir avec votre expert-comptable de qui contrôle les dépôts et qui corrige les rejets.</li>
+</ul>
+
+<div class="cta-box">
+<h2>Faire l'e-reporting de votre boutique sans y penser</h2>
+<p>Registra est une app Shopify en construction&nbsp;: elle agrège vos ventes par jour et par taux, gère les remboursements et dépose vos relevés sur une plateforme agréée à la cadence de votre régime. Le simulateur vous dit en trois questions si vous êtes concerné et à quel rythme.</p>
+<a class="btn" href="/#liste">Rejoindre la liste d'attente</a><a class="btn ghost" href="/#simulateur">Essayer le simulateur</a>
+</div>
+
+<section class="faq" aria-labelledby="faq">
+<h2 id="faq">Questions fréquentes</h2>
+<h3>Shopify fait-il l'e-reporting automatiquement&nbsp;?</h3>
+<p>Non. Shopify n'est pas une plateforme agréée et ne transmet aucune donnée de vente à l'administration fiscale. Il fournit des rapports de ventes et de taxes qui servent de matière première, mais l'agrégation par jour et par taux de TVA puis le dépôt sur une plateforme agréée doivent être faits par une application tierce, un logiciel comptable connecté ou votre expert-comptable.</p>
+<h3>Dois-je envoyer une facture électronique à mes clients particuliers&nbsp;?</h3>
+<p>Non. La facture électronique obligatoire concerne les ventes entre entreprises établies en France. Pour vos ventes aux particuliers, vous transmettez à la place des données agrégées par e-reporting&nbsp;: pour chaque jour et chaque taux de TVA, le montant hors taxes et la TVA correspondante.</p>
+<h3>Quand une boutique Shopify doit-elle faire son premier e-reporting&nbsp;?</h3>
+<p>Pour une micro-entreprise, une TPE ou une PME, l'e-reporting devient obligatoire le 1er septembre 2027. Les grandes entreprises et les ETI y sont soumises depuis le 1er septembre 2026. Depuis cette même date, toutes les entreprises doivent pouvoir recevoir des factures électroniques.</p>
+<h3>À quelle fréquence transmettre mes ventes en e-reporting&nbsp;?</h3>
+<p>Elle dépend de votre régime de TVA&nbsp;: tous les deux mois en franchise en base, chaque mois au réel simplifié et au réel normal trimestriel, trois fois par mois (par décade) au réel normal mensuel.</p>
+<h3>Je suis en franchise de TVA, suis-je concerné par l'e-reporting&nbsp;?</h3>
+<p>Oui. La franchise en base ne dispense ni de la réception des factures électroniques, ni de l'e-reporting de vos ventes aux particuliers. Elle fixe seulement une cadence bimestrielle.</p>
+<h3>Que risque une boutique qui ne fait pas son e-reporting&nbsp;?</h3>
+<p>La loi de finances pour 2026 prévoit, selon les résumés publiés, une amende de 500&nbsp;€ par transmission manquante, plafonnée à 15&nbsp;000&nbsp;€ par an. La DGFiP a annoncé ne pas sanctionner, pendant la phase de lancement, les entreprises de bonne foi qui rencontrent des difficultés, sans que cela reporte l'obligation.</p>
+</section>
+
+<h2>Pour aller plus loin</h2>
+<ul class="related">
+<li><a href="/blog/facturation-electronique-micro-entreprise-e-commerce/">Facturation électronique en micro-entreprise e-commerce&nbsp;: ce qui change en 2026 et 2027</a></li>
+<li><a href="/blog/facturation-electronique-cabinet-comptable-parametrage/">Facturation électronique en cabinet comptable&nbsp;: la checklist de paramétrage par dossier</a></li>
+<li><a href="/cabinets/">Vous êtes expert-comptable&nbsp;? L'offre de paramétrage en marque blanche</a></li>
+</ul>
+<section class="sources">
+<h2>Sources</h2>
+<p>Consultées le 3 novembre 2026.</p>
+<ol>
+<li><a href="https://www.impots.gouv.fr/professionnel/questions/partir-de-quand-suis-je-concerne-par-la-reforme-de-la-facturation" rel="noopener">impots.gouv.fr — À partir de quand suis-je concerné par la réforme de la facturation électronique&nbsp;?</a></li>
+<li><a href="https://www.impots.gouv.fr/e-reporting-donnees-de-transaction" rel="noopener">impots.gouv.fr — E-reporting&nbsp;: données de transaction (mise à jour août 2026)</a></li>
+<li><a href="https://www.impots.gouv.fr/e-reporting-tableau-des-frequences-et-delais-de-transmission" rel="noopener">impots.gouv.fr — E-reporting&nbsp;: tableau des fréquences et délais de transmission (mise à jour août 2026)</a></li>
+<li><a href="https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/faq---fe_je-decouvre-la-facturation-electronique.pdf" rel="noopener">DGFiP — FAQ «&nbsp;Je découvre la facturation électronique&nbsp;» (version du 1er septembre 2026, PDF)</a></li>
+<li><a href="https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/guide_pratique_facturation_electronique.pdf" rel="noopener">DGFiP — Guide pratique de démarrage au 1er septembre 2026 (juillet 2026, PDF)</a></li>
+<li><a href="https://www.capeb.fr/actualites/des-sanctions-plus-severes-en-cas-de-non-respect-de-la-facturation-electronique-vesr0i" rel="noopener">CAPEB — Des sanctions plus sévères en cas de non-respect de la facturation électronique (mai 2026)</a></li>
+</ol>
+</section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Registra — intégration facturation électronique pour les cabinets et les boutiques en ligne. Contact&nbsp;: bonjour@registraapp.fr. Registra est un projet indépendant, n'est affilié ni à Shopify ni à l'administration fiscale, et n'est pas un cabinet d'expertise comptable.</p>
+    <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif&nbsp;; les textes officiels et votre expert-comptable font foi.</p>
+  </div>
+</footer>
+</body>
+</html>

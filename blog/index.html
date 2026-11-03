@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides facturation électronique et e-reporting</title>
+<meta name="description" content="Guides pratiques sur la facturation électronique et l&#x27;e-reporting : boutiques Shopify, micro-entreprises e-commerce et paramétrage en cabinet comptable.">
+<link rel="canonical" href="https://registraapp.fr/blog/">
+<meta property="og:title" content="Guides facturation électronique et e-reporting">
+<meta property="og:description" content="Guides pratiques sur la facturation électronique et l&#x27;e-reporting : boutiques Shopify, micro-entreprises e-commerce et paramétrage en cabinet comptable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://registraapp.fr/blog/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Registra">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF7; --ink:#14213D; --ink-soft:#4A5470; --rule:#D5D9E6;
+    --panel:#EDF0F8; --panel-deep:#DDE3F3; --stamp:#B5321F; --ok:#2E7D5B;
+    --focus:#2F5BEA;
+    --serif:"IBM Plex Serif",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--rule)}
+  .nav{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;padding:22px 20px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.01em;text-decoration:none}
+  .brand small{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:10px}
+  .nav .links{display:flex;gap:22px}
+  .nav .links a{font-size:15px;font-weight:500;text-decoration:none}
+  .nav .links a.cta{border-bottom:2px solid var(--ink);padding-bottom:1px}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.2vw,44px);line-height:1.14;letter-spacing:-.015em;margin:0 0 20px}
+  h2{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.22;letter-spacing:-.01em;margin:48px 0 12px}
+  h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.3;margin:30px 0 8px}
+  .lede{font-size:19px;color:var(--ink-soft);margin:0 0 18px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:14px 22px;border-radius:4px;border:0;font-size:16px;font-family:var(--sans);cursor:pointer}
+  .btn:hover{background:#0E1830}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+
+  /* article */
+  article{max-width:720px;padding:28px 0 64px}
+  article p,article li{overflow-wrap:break-word}
+  .crumbs{font-size:14px;color:var(--ink-soft);margin:0 0 26px}
+  .crumbs ol{list-style:none;padding:0;margin:0}
+  .crumbs li{display:inline}
+  .crumbs li+li::before{content:"\203A";margin:0 6px}
+  .crumbs a{color:var(--ink-soft)}
+  .updated{font-size:14px;color:var(--ink-soft);margin:0 0 30px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+  article ul,article ol{padding-left:22px}
+  article li{margin-bottom:8px}
+  .tbl{overflow-x:auto;margin:18px 0 8px;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--rule);font-size:15.5px}
+  th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--panel)}
+  tr:last-child td{border-bottom:0}
+  .caption{font-size:14px;color:var(--ink-soft);margin:6px 0 0}
+  ul.check{list-style:none;padding:0;margin:18px 0}
+  ul.check li{position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--rule);margin:0}
+  ul.check li::before{content:"";position:absolute;left:2px;top:16px;width:16px;height:16px;border:2px solid var(--ink);border-radius:3px}
+  .note{background:var(--panel);border-radius:6px;padding:18px 22px;margin:22px 0}
+  .note p{margin:0}
+  .cta-box{background:#fff;border:1px solid var(--rule);border-left:5px solid var(--ok);border-radius:6px;padding:24px 26px;margin:40px 0}
+  .cta-box h2{margin:0 0 8px;font-size:23px}
+  .cta-box p{margin:0 0 16px;color:var(--ink-soft)}
+  .cta-box .btn{margin:0 10px 10px 0}
+  .faq h3{margin-top:26px}
+  .faq p{margin:0 0 8px}
+  .sources{font-size:15px}
+  .sources li{margin-bottom:6px}
+  .related{list-style:none;padding:0}
+  .related li{padding:12px 0;border-bottom:1px solid var(--rule);margin:0}
+
+  /* hub */
+  .hub{max-width:760px;padding:28px 0 64px}
+  .hub ul{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid var(--rule)}
+  .hub li{padding:22px 0;border-bottom:1px solid var(--rule)}
+  .hub li a{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.3}
+  .hub li p{margin:6px 0 0;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-soft);font-size:14px}
+  footer p{margin:0 0 8px;max-width:72ch}
+  @media (max-width:600px){
+    body{font-size:16.5px}
+    h2{font-size:24px;margin-top:40px}
+    th,td{padding:9px 10px}
+    table{font-size:14.5px}
+    .nav .links{gap:16px}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://registraapp.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://registraapp.fr/blog/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Guides facturation électronique et e-reporting",
+  "url": "https://registraapp.fr/blog/",
+  "inLanguage": "fr-FR",
+  "hasPart": [
+    {
+      "@type": "Article",
+      "headline": "E-reporting et facturation électronique sur Shopify : ce qui change pour votre boutique",
+      "url": "https://registraapp.fr/blog/e-reporting-shopify/"
+    },
+    {
+      "@type": "Article",
+      "headline": "Facturation électronique en cabinet comptable : la checklist de paramétrage par dossier client",
+      "url": "https://registraapp.fr/blog/facturation-electronique-cabinet-comptable-parametrage/"
+    },
+    {
+      "@type": "Article",
+      "headline": "Facturation électronique en micro-entreprise e-commerce : ce qui change en 2026 et 2027",
+      "url": "https://registraapp.fr/blog/facturation-electronique-micro-entreprise-e-commerce/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">Registra<small>Guides</small></a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="/blog/">Guides</a>
+      <a class="cta" href="/#liste">Liste d'attente</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<div class="hub">
+<nav class="crumbs" aria-label="Fil d'Ariane"><ol>
+  <li><a href="/">Accueil</a></li>
+  <li aria-current="page">Guides</li>
+</ol></nav>
+<h1>Guides de la facturation électronique</h1>
+<p class="lede">Trois guides pratiques sur la réforme, pour les boutiques en ligne, les micro-entrepreneurs et les cabinets comptables. Dates et règles vérifiées sur les sources officielles.</p>
+<p class="updated">Mis à jour le 3 novembre 2026</p>
+<ul>
+<li><a href="/blog/e-reporting-shopify/">E-reporting et facturation électronique sur Shopify&nbsp;: ce qui change pour votre boutique</a><p>E-reporting des ventes aux particuliers, factures B2B, calendrier 2026-2027&nbsp;: ce que la réforme impose à une boutique Shopify et ce que Shopify ne fait pas.</p></li>
+<li><a href="/blog/facturation-electronique-cabinet-comptable-parametrage/">Facturation électronique en cabinet comptable&nbsp;: la checklist de paramétrage par dossier client</a><p>Annuaire, plateforme agréée, SIREN, tests de réception, e-reporting, connecteurs&nbsp;: la checklist de paramétrage par dossier, le temps à prévoir et le prix.</p></li>
+<li><a href="/blog/facturation-electronique-micro-entreprise-e-commerce/">Facturation électronique en micro-entreprise e-commerce&nbsp;: ce qui change en 2026 et 2027</a><p>Auto-entrepreneur en e-commerce&nbsp;: recevoir des factures électroniques depuis 2026, émettre et faire l'e-reporting en 2027, choisir une plateforme agréée, coût.</p></li>
+</ul>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Registra — intégration facturation électronique pour les cabinets et les boutiques en ligne. Contact&nbsp;: bonjour@registraapp.fr. Registra est un projet indépendant, n'est affilié ni à Shopify ni à l'administration fiscale, et n'est pas un cabinet d'expertise comptable.</p>
+    <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif&nbsp;; les textes officiels et votre expert-comptable font foi.</p>
+  </div>
+</footer>
+</body>
+</html>

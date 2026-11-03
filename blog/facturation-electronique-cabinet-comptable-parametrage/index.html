@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facturation électronique en cabinet : le paramétrage</title>
+<meta name="description" content="Annuaire, plateforme agréée, SIREN, tests de réception, e-reporting, connecteurs : la checklist de paramétrage par dossier, le temps à prévoir et le prix.">
+<link rel="canonical" href="https://registraapp.fr/blog/facturation-electronique-cabinet-comptable-parametrage/">
+<meta property="og:title" content="Facturation électronique en cabinet comptable : la checklist de paramétrage par dossier client">
+<meta property="og:description" content="Annuaire, plateforme agréée, SIREN, tests de réception, e-reporting, connecteurs : la checklist de paramétrage par dossier, le temps à prévoir et le prix.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://registraapp.fr/blog/facturation-electronique-cabinet-comptable-parametrage/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Registra">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF7; --ink:#14213D; --ink-soft:#4A5470; --rule:#D5D9E6;
+    --panel:#EDF0F8; --panel-deep:#DDE3F3; --stamp:#B5321F; --ok:#2E7D5B;
+    --focus:#2F5BEA;
+    --serif:"IBM Plex Serif",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--ink)}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--rule)}
+  .nav{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;padding:22px 20px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.01em;text-decoration:none}
+  .brand small{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:10px}
+  .nav .links{display:flex;gap:22px}
+  .nav .links a{font-size:15px;font-weight:500;text-decoration:none}
+  .nav .links a.cta{border-bottom:2px solid var(--ink);padding-bottom:1px}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.2vw,44px);line-height:1.14;letter-spacing:-.015em;margin:0 0 20px}
+  h2{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.22;letter-spacing:-.01em;margin:48px 0 12px}
+  h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.3;margin:30px 0 8px}
+  .lede{font-size:19px;color:var(--ink-soft);margin:0 0 18px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:14px 22px;border-radius:4px;border:0;font-size:16px;font-family:var(--sans);cursor:pointer}
+  .btn:hover{background:#0E1830}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+
+  /* article */
+  article{max-width:720px;padding:28px 0 64px}
+  article p,article li{overflow-wrap:break-word}
+  .crumbs{font-size:14px;color:var(--ink-soft);margin:0 0 26px}
+  .crumbs ol{list-style:none;padding:0;margin:0}
+  .crumbs li{display:inline}
+  .crumbs li+li::before{content:"\203A";margin:0 6px}
+  .crumbs a{color:var(--ink-soft)}
+  .updated{font-size:14px;color:var(--ink-soft);margin:0 0 30px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+  article ul,article ol{padding-left:22px}
+  article li{margin-bottom:8px}
+  .tbl{overflow-x:auto;margin:18px 0 8px;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--rule);font-size:15.5px}
+  th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;background:var(--panel)}
+  tr:last-child td{border-bottom:0}
+  .caption{font-size:14px;color:var(--ink-soft);margin:6px 0 0}
+  ul.check{list-style:none;padding:0;margin:18px 0}
+  ul.check li{position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--rule);margin:0}
+  ul.check li::before{content:"";position:absolute;left:2px;top:16px;width:16px;height:16px;border:2px solid var(--ink);border-radius:3px}
+  .note{background:var(--panel);border-radius:6px;padding:18px 22px;margin:22px 0}
+  .note p{margin:0}
+  .cta-box{background:#fff;border:1px solid var(--rule);border-left:5px solid var(--ok);border-radius:6px;padding:24px 26px;margin:40px 0}
+  .cta-box h2{margin:0 0 8px;font-size:23px}
+  .cta-box p{margin:0 0 16px;color:var(--ink-soft)}
+  .cta-box .btn{margin:0 10px 10px 0}
+  .faq h3{margin-top:26px}
+  .faq p{margin:0 0 8px}
+  .sources{font-size:15px}
+  .sources li{margin-bottom:6px}
+  .related{list-style:none;padding:0}
+  .related li{padding:12px 0;border-bottom:1px solid var(--rule);margin:0}
+
+  /* hub */
+  .hub{max-width:760px;padding:28px 0 64px}
+  .hub ul{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid var(--rule)}
+  .hub li{padding:22px 0;border-bottom:1px solid var(--rule)}
+  .hub li a{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.3}
+  .hub li p{margin:6px 0 0;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-soft);font-size:14px}
+  footer p{margin:0 0 8px;max-width:72ch}
+  @media (max-width:600px){
+    body{font-size:16.5px}
+    h2{font-size:24px;margin-top:40px}
+    th,td{padding:9px 10px}
+    table{font-size:14.5px}
+    .nav .links{gap:16px}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Facturation électronique en cabinet comptable : la checklist de paramétrage par dossier client",
+  "description": "Annuaire, plateforme agréée, SIREN, tests de réception, e-reporting, connecteurs : la checklist de paramétrage par dossier, le temps à prévoir et le prix.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "inLanguage": "fr-FR",
+  "mainEntityOfPage": "https://registraapp.fr/blog/facturation-electronique-cabinet-comptable-parametrage/",
+  "author": {
+    "@type": "Person",
+    "name": "Amine",
+    "jobTitle": "Ingénieur DevOps"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Registra",
+    "url": "https://registraapp.fr"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://registraapp.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://registraapp.fr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Facturation électronique en cabinet comptable : la checklist de paramétrage par dossier client",
+      "item": "https://registraapp.fr/blog/facturation-electronique-cabinet-comptable-parametrage/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Le cabinet comptable peut-il choisir la plateforme agréée à la place du client ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le cabinet peut conseiller et préparer le choix, mais la DGFiP rappelle que le choix d'une plateforme est libre et relève d'une décision de gestion de l'entreprise. C'est le client qui signe la convention avec la plateforme. Le mieux est de faire valider ce choix par écrit, dans la lettre de mission ou le compte rendu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien facturer une mission de mise en place de la facturation électronique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il n'existe pas de barème officiel. La plupart des cabinets raisonnent au forfait par dossier, selon la complexité : un dossier B2B simple, un dossier avec ventes aux particuliers, un dossier e-commerce ou avec caisse. À titre de repère, Registra facture le paramétrage technique au cabinet 250, 320 ou 400 € HT selon ces trois niveaux, et le cabinet fixe librement son prix de revente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend le paramétrage d'un dossier client ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comptez une à deux heures pour un dossier simple en B2B et plutôt une demi-journée pour une boutique en ligne avec plusieurs taux de TVA et des ventes à l'étranger. Ce sont des ordres de grandeur, à recaler sur vos premiers dossiers : l'essentiel du temps part dans la collecte d'informations et les allers-retours avec le client."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il inscrire chaque client dans l'annuaire de la facturation électronique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les entreprises sont désignées dans l'annuaire des destinataires géré par l'administration à partir de la convention signée avec leur plateforme agréée. Le point de contrôle pour le cabinet est de vérifier que le SIREN du client pointe bien vers la plateforme choisie, et sur la bonne adresse de réception s'il y a plusieurs établissements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles nouvelles mentions doivent figurer sur les factures des clients ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quatre mentions s'ajoutent : le SIREN du client, la nature de l'opération (livraison de biens, prestation de services ou les deux), l'option pour la TVA d'après les débits le cas échéant, et l'adresse de livraison si elle diffère de l'adresse de facturation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les risques pour le cabinet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les principaux risques sont un paramétrage incomplet découvert lors d'un rejet, des accès délégués mal maîtrisés et une responsabilité mal délimitée entre le cabinet, le client et la plateforme. Une lettre de mission spécifique, un compte rendu écrit par dossier et des tests de réception documentés limitent ces risques."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">Registra<small>Guides</small></a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="/blog/">Guides</a>
+      <a class="cta" href="/cabinets/">Offre cabinets</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<nav class="crumbs" aria-label="Fil d'Ariane"><ol>
+  <li><a href="/">Accueil</a></li>
+  <li><a href="/blog/">Guides</a></li>
+  <li aria-current="page">Facturation électronique en cabinet comptable&nbsp;: la checklist de paramétrage par dossier client</li>
+</ol></nav>
+<h1>Facturation électronique en cabinet comptable&nbsp;: la checklist de paramétrage par dossier client</h1>
+
+<p class="lede">Mettre un client en conformité avec la facturation électronique, c'est une dizaine d'opérations techniques par dossier&nbsp;: choix et ouverture d'une plateforme agréée, vérification de l'annuaire, tests de réception, mise à jour des mentions et de la numérotation, puis e-reporting et connecteurs. Comptez de une heure à une demi-journée par dossier selon sa complexité, et facturez-le au forfait, séparément de la tenue.</p>
+<p class="updated">Mis à jour le 3 novembre 2026 · par Amine, ingénieur DevOps</p>
+
+<h2>Ce que recouvre la mission</h2>
+<p>La réforme crée pour les cabinets deux besoins distincts. Le premier est du conseil&nbsp;: expliquer au client ses obligations, choisir une stratégie (logiciel existant, nouvelle plateforme, traitement par le cabinet), adapter les process. Le second est technique&nbsp;: ouvrir des comptes, paramétrer, tester, connecter. C'est ce second volet qui consomme le temps des collaborateurs et qui se prête le mieux à une checklist.</p>
+<p>Distinguer les deux dans la lettre de mission évite de faire du paramétrage gratuit sous couvert de conseil, et clarifie qui répond de quoi en cas de rejet.</p>
+
+<h2>Le calendrier qui fixe les priorités</h2>
+<ul>
+<li><strong>Depuis le 1er septembre 2026</strong>, toutes les entreprises doivent pouvoir recevoir des factures électroniques via une plateforme agréée. Les grandes entreprises et les ETI émettent et font l'e-reporting.</li>
+<li><strong>Le 1er septembre 2027</strong>, l'émission et l'e-reporting deviennent obligatoires pour les PME, TPE et micro-entreprises, c'est-à-dire pour l'essentiel des portefeuilles de cabinets.</li>
+</ul>
+<p>La réception est donc une urgence pour les clients qui n'ont encore rien fait. Pour la réception, la DGFiP prévoit une mise en demeure de se conformer dans un délai de trois mois avant toute amende&nbsp;; ce délai ne doit pas être pris pour une marge confortable. L'émission et l'e-reporting laissent dix mois pour séquencer le portefeuille.</p>
+
+<h2>La checklist technique, dossier par dossier</h2>
+
+<h3>1. Collecter les informations du dossier</h3>
+<p>SIREN et établissements, régime de TVA, option pour les débits, canaux de vente (factures B2B, ventes aux particuliers, boutique en ligne, caisse, ventes hors de France), logiciel de facturation actuel. Un formulaire d'une page rempli par le client fait gagner plus de temps que n'importe quel outil.</p>
+
+<h3>2. Choisir la plateforme agréée</h3>
+<p>La liste officielle publiée sur impots.gouv.fr distingue les plateformes qui remplissent l'ensemble des conditions, tests d'interopérabilité compris, et celles dont l'immatriculation définitive est encore en attente. Critères utiles&nbsp;: compatibilité avec le logiciel du client, prise en charge de l'e-reporting B2C, connecteurs disponibles, accès délégué pour le cabinet, export lisible par votre outil de production, prix. La décision appartient au client&nbsp;: faites-la valider par écrit.</p>
+
+<h3>3. Vérifier l'annuaire</h3>
+<p>Après la signature de la convention avec la plateforme, l'entreprise y est désignée dans l'annuaire des destinataires géré par l'administration. Contrôlez que le SIREN du client pointe vers la bonne plateforme, et vers la bonne adresse de réception lorsqu'il y a plusieurs établissements ou services.</p>
+
+<h3>4. Tester la réception</h3>
+<p>Une facture de test reçue, visible du client et récupérée dans le circuit de comptabilisation du cabinet&nbsp;: c'est la seule preuve que la réception fonctionne. Notez la date et le résultat dans le compte rendu.</p>
+
+<h3>5. Fiabiliser les SIREN des clients du client</h3>
+<p>Pour émettre en 2027, le fichier clients doit contenir le SIREN de chaque client professionnel. C'est souvent le chantier le plus long&nbsp;: prévoyez un fichier à compléter, puis un contrôle des numéros avant import.</p>
+
+<h3>6. Mettre à jour mentions et numérotation</h3>
+<p>Quatre nouvelles mentions&nbsp;: SIREN du client, nature de l'opération (biens, services ou les deux), option pour les débits le cas échéant, adresse de livraison si elle diffère. Vérifiez aussi la continuité de la numérotation et le traitement des avoirs. Les mentions particulières restent, comme «&nbsp;TVA non applicable, article 293 B du CGI&nbsp;» pour les clients en franchise.</p>
+
+<h3>7. Paramétrer l'e-reporting</h3>
+<p>Pour les ventes aux particuliers, les données sont transmises agrégées par jour, avec la base hors taxes et la TVA par taux. La fréquence suit le régime de TVA&nbsp;: par décade au réel normal mensuel, mensuelle au réel normal trimestriel et au réel simplifié, bimestrielle en franchise en base. Ajoutez les données de paiement pour les prestations de services dont la TVA est exigible à l'encaissement.</p>
+
+<h3>8. Brancher les connecteurs</h3>
+<p>Boutique en ligne (Shopify, WooCommerce, PrestaShop), logiciel de caisse, outil de facturation métier&nbsp;: chaque source de ventes doit alimenter la plateforme sans ressaisie. C'est là que se cachent les écarts&nbsp;: remboursements, frais de port, ventes à l'étranger.</p>
+
+<h3>9. Livrer un compte rendu</h3>
+<p>Ce qui a été fait, les accès créés, les tests réalisés, les points ouverts et ce que le client doit faire lui-même. C'est la pièce qui protège le cabinet.</p>
+
+<div class="tbl"><table>
+<thead><tr><th>Étape</th><th>Qui fournit</th><th>Point de contrôle</th></tr></thead>
+<tbody>
+<tr><td>Collecte</td><td>Client</td><td>Formulaire complet, régime de TVA confirmé</td></tr>
+<tr><td>Plateforme agréée</td><td>Cabinet, validé par le client</td><td>Présente sur la liste officielle, convention signée</td></tr>
+<tr><td>Annuaire</td><td>Plateforme</td><td>SIREN pointant vers la bonne adresse</td></tr>
+<tr><td>Réception</td><td>Cabinet</td><td>Facture test reçue et comptabilisable</td></tr>
+<tr><td>SIREN clients</td><td>Client, contrôlé par le cabinet</td><td>Fichier clients complet</td></tr>
+<tr><td>Mentions et numérotation</td><td>Cabinet</td><td>Facture modèle conforme</td></tr>
+<tr><td>E-reporting</td><td>Cabinet ou intégrateur</td><td>Cadence et taux corrects, période test déposée</td></tr>
+<tr><td>Connecteurs</td><td>Intégrateur</td><td>Totaux rapprochés avec la source</td></tr>
+<tr><td>Compte rendu</td><td>Cabinet ou intégrateur</td><td>Remis et archivé au dossier</td></tr>
+</tbody></table></div>
+
+<h2>Combien de temps par dossier</h2>
+<p>Les ordres de grandeur ci-dessous sont des estimations, pas des statistiques. Ils supposent un client réactif et des accès obtenus sans relance.</p>
+<div class="tbl"><table>
+<thead><tr><th>Type de dossier</th><th>Contenu</th><th>Temps indicatif</th></tr></thead>
+<tbody>
+<tr><td>Simple</td><td>B2B seul, un logiciel, une plateforme</td><td>1 à 2 h</td></tr>
+<tr><td>Standard</td><td>Avec ventes aux particuliers et e-reporting</td><td>2 à 3 h</td></tr>
+<tr><td>E-commerce</td><td>Boutique en ligne ou caisse, plusieurs taux, ventes à l'étranger</td><td>3 à 5 h</td></tr>
+</tbody></table></div>
+<p>Le temps réel se joue moins dans le paramétrage que dans l'attente&nbsp;: documents manquants, accès non délégués, SIREN introuvables. Un formulaire en amont et un créneau fixé avec le client réduisent fortement l'écart.</p>
+
+<h2>Comment tarifer la mission</h2>
+<ul>
+<li><strong>Au forfait par dossier</strong>, en trois niveaux calés sur la typologie ci-dessus. Le client comprend ce qu'il paie, le cabinet maîtrise sa marge.</li>
+<li><strong>Séparément de la tenue</strong>, dans une lettre de mission ou un avenant dédié&nbsp;: c'est une mission ponctuelle, avec un périmètre et un livrable.</li>
+<li><strong>Avec un suivi optionnel</strong> pour les dossiers à e-reporting&nbsp;: contrôle des dépôts, traitement des rejets, au forfait mensuel ou annuel.</li>
+</ul>
+<p>Si vous sous-traitez la partie technique, le calcul est simple&nbsp;: prix de revente moins coût d'intégration moins le temps de conseil de votre collaborateur. Registra, par exemple, facture le paramétrage au cabinet 250&nbsp;€ HT pour un dossier simple, 320&nbsp;€ HT pour un dossier standard et 400&nbsp;€ HT pour un dossier e-commerce, en marque blanche.</p>
+
+<h2>Les risques à anticiper</h2>
+<ul>
+<li><strong>La responsabilité</strong>&nbsp;: sans périmètre écrit, un rejet de dépôt devient la faute du cabinet. Le compte rendu et la lettre de mission tranchent.</li>
+<li><strong>Les accès</strong>&nbsp;: préférez des accès délégués nominatifs au partage d'identifiants du client.</li>
+<li><strong>La plateforme</strong>&nbsp;: une plateforme encore en attente d'immatriculation définitive peut changer de statut&nbsp;; vérifiez la liste avant de généraliser un choix à tout le portefeuille.</li>
+<li><strong>Les sanctions du client</strong>&nbsp;: selon les résumés de la loi de finances pour 2026, 50&nbsp;€ par facture non émise électroniquement et 500&nbsp;€ par transmission d'e-reporting manquante, plafonnés à 15&nbsp;000&nbsp;€ par an pour chaque obligation, et une amende spécifique en cas d'absence de plateforme pour la réception après mise en demeure.</li>
+<li><strong>La charge en 2027</strong>&nbsp;: un portefeuille traité entièrement en juillet et août 2027 ne passera pas. Séquencez par vagues dès maintenant.</li>
+</ul>
+
+<div class="cta-box">
+<h2>Déléguer le paramétrage, garder le client</h2>
+<p>Registra prend en charge la partie technique de chaque dossier, en marque blanche&nbsp;: annuaire, plateforme agréée, tests, e-reporting, connecteurs e-commerce. Livré en 48 heures avec un compte rendu pour votre collaborateur.</p>
+<a class="btn" href="/cabinets/">Voir l'offre cabinets</a><a class="btn ghost" href="/cabinets/#contact">Parler d'un premier dossier</a>
+</div>
+
+<section class="faq" aria-labelledby="faq">
+<h2 id="faq">Questions fréquentes</h2>
+<h3>Le cabinet comptable peut-il choisir la plateforme agréée à la place du client&nbsp;?</h3>
+<p>Le cabinet peut conseiller et préparer le choix, mais la DGFiP rappelle que le choix d'une plateforme est libre et relève d'une décision de gestion de l'entreprise. C'est le client qui signe la convention avec la plateforme. Le mieux est de faire valider ce choix par écrit, dans la lettre de mission ou le compte rendu.</p>
+<h3>Combien facturer une mission de mise en place de la facturation électronique&nbsp;?</h3>
+<p>Il n'existe pas de barème officiel. La plupart des cabinets raisonnent au forfait par dossier, selon la complexité&nbsp;: un dossier B2B simple, un dossier avec ventes aux particuliers, un dossier e-commerce ou avec caisse. À titre de repère, Registra facture le paramétrage technique au cabinet 250, 320 ou 400&nbsp;€ HT selon ces trois niveaux, et le cabinet fixe librement son prix de revente.</p>
+<h3>Combien de temps prend le paramétrage d'un dossier client&nbsp;?</h3>
+<p>Comptez une à deux heures pour un dossier simple en B2B et plutôt une demi-journée pour une boutique en ligne avec plusieurs taux de TVA et des ventes à l'étranger. Ce sont des ordres de grandeur, à recaler sur vos premiers dossiers&nbsp;: l'essentiel du temps part dans la collecte d'informations et les allers-retours avec le client.</p>
+<h3>Faut-il inscrire chaque client dans l'annuaire de la facturation électronique&nbsp;?</h3>
+<p>Les entreprises sont désignées dans l'annuaire des destinataires géré par l'administration à partir de la convention signée avec leur plateforme agréée. Le point de contrôle pour le cabinet est de vérifier que le SIREN du client pointe bien vers la plateforme choisie, et sur la bonne adresse de réception s'il y a plusieurs établissements.</p>
+<h3>Quelles nouvelles mentions doivent figurer sur les factures des clients&nbsp;?</h3>
+<p>Quatre mentions s'ajoutent&nbsp;: le SIREN du client, la nature de l'opération (livraison de biens, prestation de services ou les deux), l'option pour la TVA d'après les débits le cas échéant, et l'adresse de livraison si elle diffère de l'adresse de facturation.</p>
+<h3>Quels sont les risques pour le cabinet&nbsp;?</h3>
+<p>Les principaux risques sont un paramétrage incomplet découvert lors d'un rejet, des accès délégués mal maîtrisés et une responsabilité mal délimitée entre le cabinet, le client et la plateforme. Une lettre de mission spécifique, un compte rendu écrit par dossier et des tests de réception documentés limitent ces risques.</p>
+</section>
+
+<h2>Pour aller plus loin</h2>
+<ul class="related">
+<li><a href="/blog/e-reporting-shopify/">E-reporting et facturation électronique sur Shopify&nbsp;: ce qui change pour une boutique</a></li>
+<li><a href="/blog/facturation-electronique-micro-entreprise-e-commerce/">Facturation électronique en micro-entreprise e-commerce&nbsp;: 2026 et 2027</a></li>
+<li><a href="/cabinets/">L'offre de paramétrage en marque blanche pour les cabinets</a></li>
+</ul>
+<section class="sources">
+<h2>Sources</h2>
+<p>Consultées le 3 novembre 2026.</p>
+<ol>
+<li><a href="https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/guide_pratique_facturation_electronique.pdf" rel="noopener">DGFiP — Guide pratique de démarrage au 1er septembre 2026 (juillet 2026, PDF)</a></li>
+<li><a href="https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/faq---fe_je-decouvre-la-facturation-electronique.pdf" rel="noopener">DGFiP — FAQ «&nbsp;Je découvre la facturation électronique&nbsp;» (version du 1er septembre 2026, PDF)</a></li>
+<li><a href="https://www.impots.gouv.fr/liste-des-plateformes-agreees-immatriculees" rel="noopener">impots.gouv.fr — Liste des plateformes agréées (modifiée le 30 octobre 2026)</a></li>
+<li><a href="https://www.impots.gouv.fr/e-reporting-tableau-des-frequences-et-delais-de-transmission" rel="noopener">impots.gouv.fr — E-reporting&nbsp;: tableau des fréquences et délais de transmission</a></li>
+<li><a href="https://bofip.impots.gouv.fr/bofip/13900-PGP.html/identifiant=BOI-TVA-DECLA-20-30-50-30-20260930" rel="noopener">BOFiP — BOI-TVA-DECLA-20-30-50-30, modalités de transmission des données (version du 30 septembre 2026)</a></li>
+<li><a href="https://www.capeb.fr/actualites/des-sanctions-plus-severes-en-cas-de-non-respect-de-la-facturation-electronique-vesr0i" rel="noopener">CAPEB — Des sanctions plus sévères en cas de non-respect de la facturation électronique (mai 2026)</a></li>
+</ol>
+</section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Registra — intégration facturation électronique pour les cabinets et les boutiques en ligne. Contact&nbsp;: bonjour@registraapp.fr. Registra est un projet indépendant, n'est affilié ni à Shopify ni à l'administration fiscale, et n'est pas un cabinet d'expertise comptable.</p>
+    <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif&nbsp;; les textes officiels et votre expert-comptable font foi.</p>
+  </div>
+</footer>
+</body>
+</html>

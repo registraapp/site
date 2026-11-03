@@ -141,7 +141,7 @@
     <dl class="facts">
       <div>
         <dt>Vos ventes aux particuliers</dt>
-        <dd>Elles ne demandent pas de facture électronique, mais leurs montants (hors taxes, TVA par taux, nombre de transactions) doivent être transmis au fisc par e-reporting, à une cadence qui dépend de votre régime de TVA.</dd>
+        <dd>Elles ne demandent pas de facture électronique, mais leurs montants cumulés par jour (hors taxes et TVA, par taux) doivent être transmis au fisc par e-reporting, à une cadence qui dépend de votre régime de TVA.</dd>
       </div>
       <div>
         <dt>Vos factures aux professionnels</dt>
@@ -279,6 +279,8 @@
     <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif ; les textes officiels et votre expert-comptable font foi.</p>
     <p>Cabinets d'expertise comptable : <a href="/cabinets/">paramétrage de la facturation électronique de vos clients, en marque blanche</a>.</p>
   </div>
+
+<div class="wrap" style="padding:0 20px 28px;font-size:14px"><p><a href="/blog/"><strong>Guides</strong></a> : <a href="/blog/e-reporting-shopify/">E-reporting Shopify : ce que doit faire votre boutique</a> · <a href="/blog/facturation-electronique-cabinet-comptable-parametrage/">Facturation électronique en cabinet : le paramétrage</a> · <a href="/blog/facturation-electronique-micro-entreprise-e-commerce/">Facture électronique micro-entreprise : 2026 et 2027</a></p></div>
 </footer>
 
 <script>
@@ -302,7 +304,7 @@
     var c=cadence[regime];
     var html='<h3>Oui, vous êtes concerné '+date+'.</h3>';
     html+='<p>Vos ventes aux particuliers devront être transmises par e-reporting :</p>';
-    html+='<div class="cad">'+c.txt+'</div><p>'+c.n+', avec les montants hors taxes, la TVA par taux et le nombre de transactions. Les remboursements corrigent les dépôts déjà transmis.</p>';
+    html+='<div class="cad">'+c.txt+'</div><p>'+c.n+', avec les montants hors taxes et la TVA cumulés par jour et par taux. Les remboursements doivent être corrigés dans les transmissions suivantes ; vérifiez la méthode avec votre plateforme agréée.</p>';
     if(b2b==='oui'){
       html+='<p>Vos factures aux clients professionnels devront en plus être émises au format Factur-X et déposées sur une plateforme agréée, avec une numérotation continue.</p>';
     }
