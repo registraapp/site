@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Registra — l'e-reporting de votre boutique Shopify, fait pour vous</title>
-<meta name="description" content="À partir du 1er septembre 2027, votre boutique Shopify devra transmettre ses ventes au fisc par e-reporting. Registra le fera automatiquement. Liste d'attente ouverte.">
+<title>E-reporting Shopify et facturation électronique | Registra</title>
+<meta name="description" content="E-reporting des ventes Shopify aux particuliers : ce que la réforme impose dès 2026-2027, simulateur gratuit et application qui déclare pour vous.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -90,7 +90,27 @@
     .sim,.join{grid-template-columns:1fr}
     .sim{padding:22px}
   }
+
+  .faq{max-width:780px}
+  .faq details{border-bottom:1px solid var(--rule);padding:14px 0}
+  .faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-weight:400;font-size:22px;line-height:1}
+  .faq details[open] summary::after{content:"\2212"}
+  .faq details p{margin:10px 0 0;color:var(--ink-soft, var(--soft))}
 </style>
+<link rel="canonical" href="https://registraapp.fr/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Registra">
+<meta property="og:title" content="E-reporting Shopify et facturation électronique | Registra">
+<meta property="og:description" content="E-reporting des ventes Shopify aux particuliers : ce que la réforme impose dès 2026-2027, simulateur gratuit et application qui déclare pour vous.">
+<meta property="og:url" content="https://registraapp.fr/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://registraapp.fr/#org", "name": "Registra", "url": "https://registraapp.fr/", "email": "bonjour@registraapp.fr", "logo": "https://registraapp.fr/favicon.svg", "founder": {"@type": "Person", "name": "Amine", "jobTitle": "Ingénieur DevOps"}}, {"@type": "WebPage", "@id": "https://registraapp.fr/", "url": "https://registraapp.fr/", "name": "E-reporting Shopify et facturation électronique | Registra", "description": "E-reporting des ventes Shopify aux particuliers : ce que la réforme impose dès 2026-2027, simulateur gratuit et application qui déclare pour vous.", "inLanguage": "fr-FR", "isPartOf": {"@type": "WebSite", "@id": "https://registraapp.fr/#site", "url": "https://registraapp.fr/", "name": "Registra", "inLanguage": "fr-FR", "publisher": {"@id": "https://registraapp.fr/#org"}}, "about": {"@id": "https://registraapp.fr/#service"}}, {"@type": "Service", "@id": "https://registraapp.fr/#service", "name": "E-reporting automatique des ventes Shopify", "serviceType": "Logiciel de conformité facturation électronique et e-reporting", "provider": {"@id": "https://registraapp.fr/#org"}, "areaServed": {"@type": "Country", "name": "France"}, "url": "https://registraapp.fr/"}, {"@type": "FAQPage", "@id": "https://registraapp.fr/#faq", "mainEntity": [{"@type": "Question", "name": "Une boutique Shopify est-elle concernée par l'e-reporting ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les ventes aux particuliers (B2C) d'une entreprise assujettie à la TVA en France doivent être transmises à l'administration fiscale sous forme de données agrégées, via une plateforme agréée. Shopify ne fait pas cette transmission nativement."}}, {"@type": "Question", "name": "À partir de quand faut-il déclarer ses ventes en e-reporting ?", "acceptedAnswer": {"@type": "Answer", "text": "Toutes les entreprises doivent pouvoir recevoir des factures électroniques depuis le 1er septembre 2026. L'émission et l'e-reporting deviennent obligatoires le 1er septembre 2026 pour les grandes entreprises et les ETI, et le 1er septembre 2027 pour les PME et micro-entreprises."}}, {"@type": "Question", "name": "Quelles données de vente faut-il transmettre ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour les ventes aux particuliers : le montant total des opérations par jour, ventilé par taux de TVA, le montant de TVA correspondant et la date, ainsi que les données de paiement pour les prestations de services."}}, {"@type": "Question", "name": "Faut-il changer de plateforme e-commerce ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il faut un connecteur entre Shopify et une plateforme agréée qui agrège les commandes, applique les bons taux de TVA, gère les remboursements et transmet les données au bon rythme."}}]}]}</script>
 </head>
 <body>
 
@@ -186,6 +206,16 @@
     <p class="not">Ce que Registra ne fera pas : déclarer ou payer votre TVA à votre place, ni remplacer votre expert-comptable. Il lui apporte des données propres, à l'heure.</p>
   </section>
 
+    <section class="faq-wrap" id="faq">
+    <h2 class="s">Questions fréquentes</h2>
+    <div class="faq">
+      <details><summary>Une boutique Shopify est-elle concernée par l'e-reporting&nbsp;?</summary><p>Oui. Les ventes aux particuliers (B2C) d'une entreprise assujettie à la TVA en France doivent être transmises à l'administration fiscale sous forme de données agrégées, via une plateforme agréée. Shopify ne fait pas cette transmission nativement.</p></details>
+      <details><summary>À partir de quand faut-il déclarer ses ventes en e-reporting&nbsp;?</summary><p>Toutes les entreprises doivent pouvoir recevoir des factures électroniques depuis le 1er septembre 2026. L'émission et l'e-reporting deviennent obligatoires le 1er septembre 2026 pour les grandes entreprises et les ETI, et le 1er septembre 2027 pour les PME et micro-entreprises.</p></details>
+      <details><summary>Quelles données de vente faut-il transmettre&nbsp;?</summary><p>Pour les ventes aux particuliers&nbsp;: le montant total des opérations par jour, ventilé par taux de TVA, le montant de TVA correspondant et la date, ainsi que les données de paiement pour les prestations de services.</p></details>
+      <details><summary>Faut-il changer de plateforme e-commerce&nbsp;?</summary><p>Non. Il faut un connecteur entre Shopify et une plateforme agréée qui agrège les commandes, applique les bons taux de TVA, gère les remboursements et transmet les données au bon rythme.</p></details>
+    </div>
+  </section>
+
   <section id="liste">
     <div class="join">
       <div>
@@ -247,6 +277,7 @@
   <div class="wrap">
     <p>Registra est un projet indépendant en cours de construction, novembre 2026. Il n'est pas encore disponible et n'est affilié ni à Shopify ni à l'administration fiscale.</p>
     <p>Les informations de cette page résument la réforme de la facturation électronique à titre indicatif ; les textes officiels et votre expert-comptable font foi.</p>
+    <p>Cabinets d'expertise comptable : <a href="/cabinets/">paramétrage de la facturation électronique de vos clients, en marque blanche</a>.</p>
   </div>
 </footer>
 
